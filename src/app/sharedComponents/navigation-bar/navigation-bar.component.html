@@ -1,19 +1,34 @@
 <body>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row >
+  <img src="assets/images/Icon-App-76x76@2x 1.svg" alt="" class="logo">
   <nav class="navbar">
     <span class="nav-toggle" id="toggle-action">
       <mat-icon>menu</mat-icon>
     </span>
-    <a class="logo">Logo</a>
+
     <ul class="main-nav" id="desktop-menu">
       <li>
-        <a href="#" class="nav-links">Contatos</a>
+        <a routerLink ="/contacts-create-edit" class="nav-links">Contatos</a>
       </li>
       <li>
-        <a href="#" class="nav-links">Usuários</a>
+        <a routerLink ="/user-create-edit" class="nav-links">Usuários</a>
       </li>
       <li>
-        <a href="#" class="nav-links">Logout</a>
+        <a routerLink ="/login" class="nav-links">Logout</a>
       </li>
     </ul>
   </nav>
+</mat-toolbar-row>
+</mat-toolbar>
 </body>
+
+
+
+
+   <!--  <span>Second Line</span>
+    <span class="example-spacer"></span>
+    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon> -->
+
+
+

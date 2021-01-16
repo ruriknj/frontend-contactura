@@ -12,6 +12,11 @@ import { CreateEditContactsComponent } from './contacts/create-edit/create-edit.
 import { ListContactsComponent } from './contacts/list/list.component';
 import { CreateEditUserComponent } from './user/create-edit/create-edit.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -26,9 +31,17 @@ import { MatIconModule } from '@angular/material/icon';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule,
+    MatIconModule,
+    MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

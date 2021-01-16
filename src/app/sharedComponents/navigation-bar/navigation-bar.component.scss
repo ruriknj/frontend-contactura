@@ -9,8 +9,8 @@ body {
 }
 
 .navbar {
+  flex: 1 1 auto;
   font-size: 18px;
-  background: #f8f9fa;
   padding-bottom: 10px;
 }
 
@@ -20,13 +20,15 @@ body {
   float: right;
   font-size: 20px;
   cursor: pointer;
-  color: #000000;
+  color: #faf4f9;
 }
 
 .logo {
-  display: inline-block;
-  font-size: 20px;
-  font-weight: bold;
+  padding: 5 5;
+
+
+
+
 }
 
 .main-nav {
