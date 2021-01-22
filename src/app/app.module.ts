@@ -45,7 +45,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatToolbarModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
