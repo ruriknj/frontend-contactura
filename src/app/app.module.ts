@@ -13,13 +13,13 @@ import { ListContactsComponent } from './contacts/list/list.component';
 import { CreateEditUserComponent } from './user/create-edit/create-edit.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { NgxPaginationModule } from 'ngx-pagination';
-
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -46,7 +46,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     MatFormFieldModule,
     MatToolbarModule,
     NgxPaginationModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

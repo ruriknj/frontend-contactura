@@ -1,3 +1,4 @@
+import { AuthAdminGuard } from './service/auth.guard';
 import { Error404Component } from './sharedComponents/error404/error404.component';
 import { CreateEditUserComponent } from './user/create-edit/create-edit.component';
 import { NgModule } from '@angular/core';
@@ -14,8 +15,9 @@ const routes: Routes = [
   { path: 'contacts-create-edit', component: CreateEditContactsComponent },
   { path: 'contacts-list', component: ListContactsComponent },
   { path: 'user-create-list', component: CreateEditUserComponent },
-  { path: 'user-list', component: ListUserComponent }
-  //{ path: '**', component: Error404Component} 
+  { path: 'user-list', component: ListUserComponent },
+  { path: 'user-list', component: ListUserComponent, canActivate: [AuthAdminGuard]}
+  //{ path: '**', component: Error404Component}
 ];
 
 @NgModule({

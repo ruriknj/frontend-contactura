@@ -12,6 +12,7 @@
         <a routerLink ="/contacts-list" class="nav-links">Contatos</a>
       </li>
       <li>
+        <li *ngIf="admin != 'false'">
         <a routerLink ="/user-list" class="nav-links">Usuários</a>
       </li>
       <li>

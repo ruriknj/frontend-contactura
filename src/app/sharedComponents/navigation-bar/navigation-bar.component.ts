@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+  admin = 'false';
 
   ngOnInit(): void {
+    console.log('teste');
     this.putEvents();
+    this.admin = localStorage.getItem('admin');
   }
 
   putEvents() {
@@ -21,4 +25,10 @@ export class NavigationBarComponent implements OnInit {
       menuDesktop.classList.toggle('active');
     });
   }
+
+  logout() {
+    localStorage.removeItem('token');
+    this.router.navigate(['/login']);
+  }
+
 }

@@ -9,7 +9,7 @@
   }
 }
 
-example-form {
+.example-form {
   min-width: 150px;
   max-width: 500px;
   width: 100%;
@@ -23,7 +23,7 @@ example-form {
   display: grid;
   grid-template-columns: auto auto;
   padding: 10px;
-  //gap: 100px;
+  gap: 10px;
 }
 
 .grid-item {
@@ -31,10 +31,22 @@ example-form {
   text-align: center;
 }
 
-input {
-  width: 100% ;
-  }
+.grid-container-button {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding-left: 30px;
+  gap: 10px;
 
-.input {
-  width: 82% ;
+  button {
+    width: 130px;
+  }
+}
+
+@media screen and (max-with: 600px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 10px;
+    gap: 10px;
+  }
 }
