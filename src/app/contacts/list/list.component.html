@@ -15,7 +15,6 @@
     <table>
       <thead>
         <tr>
-          <th scope="col">Posição</th>
           <th scope="col">Nome</th>
           <th scope="col">Email</th>
           <th scope="col">Fone</th>
@@ -23,15 +22,16 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of collection.data | paginate: config">
-          <td data-label="Posicao">{{item.posicao}}</td>
-          <th data-label="Nome">{{item.nome}}</th>
+        <tr *ngFor="let item of contactLits | paginate: config">
+          <th data-label="Nome">{{item.name}}</th>
           <td data-label="Email">{{item.email}}</td>
-          <td data-label="Fone">{{item.fone}}</td>
+          <td data-label="Fone">{{item.phone}}</td>
           <td data-label="Menu">
-            <div class class="button_check_color">
-               <button class="buttons-first-positions" mat-raised-button color="accent">Excluir</button>
-               <button mat-raised-button color="warn">Editar</button>
+            <div class="button_check_color">
+              <button class="buttons-first-position"
+              mat-raised-button color="accent" (click)="deleteContacts(item.id)">Excluir</button>
+              <button mat-raised-button color="warn" (click)="editContact(item)">Editar</button>
+              <button mat-raised-button color="warn" (click)="find(item.id)">Pesquisar</button>
             </div>
           </td>
         </tr>

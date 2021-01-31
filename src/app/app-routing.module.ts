@@ -1,3 +1,4 @@
+import { AuthGuard } from './service/auth.guard';
 import { AuthAdminGuard } from './service/auth.guard';
 import { Error404Component } from './sharedComponents/error404/error404.component';
 import { CreateEditUserComponent } from './user/create-edit/create-edit.component';
@@ -12,10 +13,9 @@ import { CommonModule } from '@angular/common';
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full'},
   { path: 'login', component: LoginComponent },
-  { path: 'contacts-create-edit', component: CreateEditContactsComponent },
-  { path: 'contacts-list', component: ListContactsComponent },
-  { path: 'user-create-list', component: CreateEditUserComponent },
-  { path: 'user-list', component: ListUserComponent },
+  { path: 'contacts-create-edit', component: CreateEditContactsComponent, canActivate: [AuthGuard] },
+  { path: 'contacts-list', component: ListContactsComponent, canActivate: [AuthGuard] },
+  { path: 'user-create-list', component: CreateEditUserComponent, canActivate: [AuthAdminGuard] },
   { path: 'user-list', component: ListUserComponent, canActivate: [AuthAdminGuard]}
   //{ path: '**', component: Error404Component}
 ];

@@ -20,6 +20,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MatInputModule } from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { MatInputModule } from '@angular/material/input';
     MatToolbarModule,
     NgxPaginationModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
